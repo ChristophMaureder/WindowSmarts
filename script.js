@@ -151,11 +151,4 @@ if (window.innerWidth < 768) {
     });
 }
 
-// Handle resize events
-let resizeTimer;
-window.addEventListener('resize', () => {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => {
-        location.reload();
-    }, 250);
-});
+// Removed automatic page reload on resize to prevent unwanted reloads during scrolling and keyboard usage on mobile devices
